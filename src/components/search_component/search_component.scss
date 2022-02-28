@@ -1,0 +1,40 @@
+.control_panel {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    float: left;
+    background-color: antiquewhite;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.control_panel input {
+    width: 80%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 0rem;
+}
+
+.control_panel input:focus {
+    outline: none !important;
+    border: none;
+    box-shadow: 0 0 50px 2px lightcoral;
+}
+
+.control_panel button {
+    width: 80%;
+    cursor: pointer;
+    background-color: lightcoral;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 0rem;
+    box-shadow: 0 0 10px 10px rgba(206, 206, 206, 0.426);
+    margin-bottom: 3rem;
+}
