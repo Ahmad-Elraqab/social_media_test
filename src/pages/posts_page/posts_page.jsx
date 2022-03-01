@@ -10,6 +10,7 @@ import PostComponent from "../../components/post_component/post_component"
 import CommentComponent from "../../components/comment_component/comment_component"
 import SearchBar from "../../components/search_component/search_component"
 import { sortBy } from "underscore";
+import { NULL } from "mysql/lib/protocol/constants/types";
 
 class Post extends Component {
 
@@ -104,7 +105,7 @@ class Post extends Component {
                                     <CommentComponent key={element.id} delete={this.delete_comment} data={comments.filter(e => e.postId === element.id)} />
                                 </PostComponent>
 
-                                : index < this.state.page * 3 && element.userId == search ?
+                                : element.userId == search ?
 
                                     <PostComponent key={element.id} id={element} delete={this.delete_post} title={element.title} body={element.body}>
                                         <CommentComponent key={element.id} delete={this.delete_comment} data={comments.filter(e => e.postId === element.id)} />
